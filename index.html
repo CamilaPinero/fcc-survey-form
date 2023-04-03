@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Provincial Gatuno</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Registro Provincial de Tutores Gatunos de Córdoba</h1>
+    <p id=description>
+      Complete el siguiente formulario para incorporar su información y la de
+      sus gatos al registro provincial.
+    </p>
+    <form id="survey-form">
+      <fieldset> 
+        <h3>Información del/@ tutor/@</h3>
+        <label for="name"
+          >Ingrese su nombre<input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Juan Gatito"
+          />
+        </label>
+        <label for="email"
+          >Ingrese su Email<input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="gatito@email.com"
+          />
+        </label>
+        <label for="number"
+          >Ingrese su edad<input
+            type="number"
+            id="number"
+            name="number"
+            required
+            min="8"
+            max="120"
+            placeholder="27"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <h3>Información de su/s gato/s</h3>
+        <select id="dropdown">
+          <option value="">Indique con cuantos gatos vive</option>
+          <option value="1">Convivo con 1 gato</option>
+          <option value="2">Convivo con entre 2 y 5 gatos</option>
+          <option value="3">Convivo con 5 o más gatos</option>
+        </select>
+        <h4>Indique el origen y genética de su/s gato/s</h4>
+       <div class="fila">
+        <div class="columna">
+          <label for="adoptado"
+            ><input id="adoptado" type="radio" name="origen" class="inline" />
+            Adoptado/s</label
+          >
+          <label for="comprado" 
+            ><input
+              id="comprado"
+              type="radio"
+              name="comprado"
+              class="inline"
+            />Comprado/s</label
+          >
+        </div>
+        <div class="columna"> 
+          <label for="de-raza" 
+            >
+            <input
+              id="de-raza"
+              type="checkbox"
+              name="de-raza"
+              class="inline"
+              value="1"
+            />
+            De Raza</label
+          >
+          <label for="mestizo"
+            ><input
+              id="mestizo"
+              type="checkbox"
+              name="mestizo"
+              class="inline"
+              value="2"
+            />
+            Mestizo</label
+          >
+        </div>
+       </div>
+      </fieldset>
+      <fieldset>
+        <textarea
+          id="experiencia"
+          name="experiencia"
+          rows="3"
+          cols="30"
+          placeholder="Mi experiencia como tutor de gatitos ha sido..."
+        ></textarea>
+        <input id="submit" class="submit" type="submit" value="Enviar" />
+      </fieldset>
+    </form>
+  </body>
+</html>
